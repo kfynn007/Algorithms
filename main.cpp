@@ -376,3 +376,31 @@ void stringMatcher(string T, string pattern){
 
 }
 
+//Naive string pattern algorithm, worst runtime complexity
+int naive(string pattern, string text){
+
+  int index=0;
+  int temp=-1;
+  int j=-1;
+  while (j!=text.length ()-1){
+      j+=1;
+      temp=j;
+
+      while (pattern[index]==text[temp] && index<pattern.length ()){
+          ++index;
+          ++temp;
+        }
+      if (index==pattern.length ()){
+
+          cout<<"found\n";
+          index=0;
+        }
+
+      else{
+          index=0;
+
+        }
+    }
+
+}
+
